@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/foundation.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/vendor/modernizr.js"></script>
+    <title>Grocery List 2</title>
+  </head>
+  <body>
+    <h2>Grocery List 2</h2>
+    <ul>
+      <% @items.each do |item| %>
+        <li><%= item %></li>
+      <% end %>
+    </ul>
+    <form action="/groceries" method="post">
+      <label for="item">Add New Item:</label>
+      <input type="text" id="item" name="item">
+      <input type="submit">
+    </form>
+  </body>
+</html>
