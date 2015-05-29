@@ -1,6 +1,1 @@
-name,type,amount
-bananas,fruit,34
-apples,fruit,22
-steaks,meat,5
-chicken,meat,3
-cucumber,veg,6
+test
