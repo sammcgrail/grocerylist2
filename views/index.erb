@@ -8,16 +8,22 @@
     <title>Grocery List 2</title>
   </head>
   <body>
+    <h1><%= error_message %></h1>
     <h2>Grocery List 2</h2>
     <ul>
-      <% @items.each do |item| %>
-        <li><%= item %></li>
-      <% end %>
+      <% grocery_list.each do |item| %>
+      <li>
+        <%= item["grocery"] %>
+      </li>
+    <% end %>
     </ul>
+
     <form action="/groceries" method="post">
-      <label for="item">Add New Item:</label>
+      <label for="item">Item:</label>
       <input type="text" id="item" name="item">
+
       <input type="submit">
     </form>
+
   </body>
 </html>

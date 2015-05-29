@@ -10,11 +10,9 @@
 --   <column definitions go here>
 -- );
 
-DROP TABLE IF EXISTS grocery_list;
+DROP TABLE IF EXISTS groceries CASCADE;
 
-CREATE TABLE grocery_list (
+CREATE TABLE groceries (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
-  type VARCHAR(255),
-  amount INTEGER
+  grocery VARCHAR(255)
 );
