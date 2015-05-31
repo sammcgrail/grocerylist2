@@ -10,17 +10,19 @@
   <body>
     <h1><%= error_message %></h1>
     <h2>Grocery List 2</h2>
-    <ul>
       <% grocery_list.each do |item| %>
-      <li>
-        <%= item["grocery"] %>
-      </li>
-    <% end %>
-    </ul>
 
-    <form action="/groceries" method="post">
-      <label for="item">Item:</label>
-      <input type="text" id="item" name="item">
+      <table style="width:100%">
+  <tr>
+    <td><%= item["grocery"] %></td>
+  </tr>
+</table>
+
+    <% end %>
+
+    <form action="/groceries" method="post" align="center">
+      <label for="item">Add New Item:</label>
+      <input type="text" id="item" name="item" >
 
       <input type="submit">
     </form>
